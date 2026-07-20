@@ -348,6 +348,80 @@
     font-size:13px; color:var(--grad-d); margin-bottom:12px; font-style:italic;
   }
  
+  /* ---------- EXPERIENCE & EDUCATION ---------- */
+  .timeline-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    margin-top:40px;
+  }
+  @media (max-width:840px){ .timeline-grid{ grid-template-columns:1fr; gap:60px; } }
+ 
+  .timeline-col h3{
+    font-size:14px;
+    font-family:'JetBrains Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--grad-c);
+    margin-bottom:28px;
+  }
+ 
+  .timeline{
+    position:relative;
+    padding-left:26px;
+    border-left:1px solid var(--border-soft);
+  }
+  .timeline-item{
+    position:relative;
+    padding-bottom:32px;
+  }
+  .timeline-item:last-child{ padding-bottom:0; }
+  .timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-31px; top:4px;
+    width:11px; height:11px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--grad-a), var(--grad-c));
+    box-shadow:0 0 0 4px var(--bg-deep);
+  }
+  .timeline-item:nth-child(2)::before{ background:linear-gradient(135deg, var(--grad-c), var(--grad-b)); }
+  .timeline-item:nth-child(3)::before{ background:linear-gradient(135deg, var(--grad-b), var(--grad-d)); }
+  .timeline-item:nth-child(4)::before{ background:linear-gradient(135deg, var(--grad-d), var(--grad-a)); }
+  .timeline-item:nth-child(5)::before{ background:linear-gradient(135deg, var(--grad-a), var(--grad-b)); }
+ 
+  .timeline-item .when{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--grad-d);
+    margin-bottom:6px;
+    display:block;
+  }
+  .timeline-item h4{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:17px;
+    font-weight:600;
+    margin:0 0 4px;
+    color:var(--text-primary);
+  }
+  .timeline-item .org{
+    font-size:13px;
+    color:var(--text-muted);
+    margin-bottom:10px;
+    font-style:italic;
+  }
+  .timeline-item ul{
+    margin:0; padding-left:18px;
+    font-size:13.5px;
+    color:var(--text-muted);
+  }
+  .timeline-item ul li{ margin-bottom:4px; }
+  .timeline-item p.note{
+    font-size:13.5px;
+    color:var(--text-muted);
+    margin:0;
+  }
+ 
   /* ---------- CONTACT / FOOTER ---------- */
   .contact{
     text-align:center;
@@ -397,6 +471,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -662,9 +737,86 @@
   </div>
 </section>
  
+<!-- EXPERIENCE & EDUCATION -->
+<section class="section" id="experience">
+  <div class="eyebrow reveal">04 / Experience &amp; Education</div>
+  <h2 class="reveal" style="font-size:clamp(28px,4vw,42px);">Where the <span class="gradient-text">skills were built.</span></h2>
+ 
+  <div class="timeline-grid">
+    <div class="timeline-col reveal">
+      <h3>Work Experience</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="when mono">Dec 2025 — Present</span>
+          <h4>Application Administration Intern</h4>
+          <div class="org">Union Bank — IT Department</div>
+          <ul>
+            <li>Supporting IT application administration operations within the bank's technology department</li>
+            <li>Monitoring and maintaining enterprise applications to ensure system availability and performance</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <span class="when mono">Jan 2023 — May 2023</span>
+          <h4>Training Assistant</h4>
+          <div class="org">ICOSERVE Engineering (PVT) LTD</div>
+          <ul>
+            <li>Assisted in coordinating and delivering internal training programmes</li>
+            <li>Supported administrative and logistical aspects of training operations</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <span class="when mono">Mar 2022 — Dec 2022</span>
+          <h4>Operation Executive Officer</h4>
+          <div class="org">Startek, Aegis Services Lanka (PVT) LTD</div>
+          <ul>
+            <li>Handled customer inquiries for the Commercial Bank Contact Centre — debit cards, credit cards, and accounts</li>
+            <li>Delivered consistent service quality in a high-volume call centre environment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="timeline-col reveal">
+      <h3>Education &amp; Awards</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="when mono">2023 — 2026</span>
+          <h4>BSc Information Technology &amp; Data Science</h4>
+          <div class="org">Curtin University, Colombo</div>
+          <p class="note">Covering information technology, data science, databases, and AI.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="when mono">Semester 1, 2025</span>
+          <h4>Dean's List Award</h4>
+          <div class="org">Curtin University, Colombo</div>
+          <p class="note">Awarded for achieving above 80 marks across all modules.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="when mono">Feb 2025</span>
+          <h4>Certificate in Quality Assurance</h4>
+          <div class="org">Alison Academic</div>
+          <p class="note">QA techniques and methodologies.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="when mono">2019 — 2022</span>
+          <h4>GCE Advanced Level — Combined Mathematics</h4>
+          <div class="org">St. Paul's Girls' School</div>
+          <p class="note">English medium; strong foundation in mathematics and analytical thinking.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="when mono">2007 — 2018</span>
+          <h4>GCE Ordinary Level</h4>
+          <div class="org">Lindsay Girls' School</div>
+          <p class="note">Broad academic foundation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="eyebrow reveal" style="justify-content:center;">04 / Let's Connect</div>
+  <div class="eyebrow reveal" style="justify-content:center;">05 / Let's Connect</div>
   <h2 class="reveal gradient-text">Let's build something.</h2>
   <p class="reveal">Open to opportunities in Project Management, Data Analysis, and Development. Reach out — I reply fast.</p>
   <div class="contact-links reveal">
